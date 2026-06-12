@@ -1,10 +1,10 @@
 import streamlit as st
 from llmController import llm1_controller,llm2_controller
-from makeBrouchure import generate_brochure_html
+from makeBrochure import generate_brochure_html
 
 
 st.set_page_config(layout="wide")
-st.title("📖 Brouchure Maker")
+st.title("📖 Brochure Maker")
 
 if "img_links" not in st.session_state:
     st.session_state.img_links = []
@@ -103,5 +103,5 @@ if st.session_state.state_step == "final_render":
         st.iframe(htmlfile, height=600)
         st.download_button(label="Download Print-Ready Brochure (HTML/CSS)-Save as PDF with ctrl+P",
                         data=htmlfile,
-                        file_name=f"{name.lower().replace(" ","_")}_brouchure.html",
+                        file_name=f"{name.lower().replace(" ","_")}_brochure.html",
                         mime="text/html")
