@@ -1,0 +1,6 @@
+Sample Input:
+Brouchure details:
+URL: https://aiskillsnavigator.microsoft.com/events/AISF2026
+Choose Content Tone: Professional
+Company/Event: Event
+Name: Micrsoft AI fest 2026
