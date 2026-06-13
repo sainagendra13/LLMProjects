@@ -30,7 +30,7 @@ with st.sidebar:
         name=st.text_input("Please name the Company/Event Name")
         submit_btn=st.form_submit_button("submit")
 
-if submit_btn and url:
+if submit_btn and url and st.session_state.state_step == "form_entry":
     with st.spinner("Analyzing website links and scraping assets..."):
         response, img_links = llm1_controller(url,type_select)
         st.session_state.llm_response = response
